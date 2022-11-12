@@ -85,6 +85,68 @@
       cursor:pointer;
     }
 
+    .navbar{
+      width:88%;
+      margin: auto;
+      padding: 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo{
+      width: 140px;
+      cursor: pointer;
+    }
+
+    .navbar ul li{
+      list-style: none;
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    .navbar ul li a{
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .navbar ul li a:hover{
+      color:#413F42;
+    }
+
+    .dropbtn {
+      cursor: pointer;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {background-color: #000}
+
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+
     </style>
 
   </head>
@@ -93,13 +155,29 @@
     <div class="container">
 
       <div class="navbar">
-        <img src="media/logo.png" alt="logo1">
+        <img class"logo" src="media/site/logo.png" alt="logo1">
         <ul>
           <li><a href="/about">ABOUT</a></li>
-          <li><a href="#">MUSIC BLOGS</a></li>
-          <li><a href="#">RADIO STATION</a></li>
-          <li><a href="#">MUSIC FORUM</a></li>
+          <li>
+            <div class="dropdown">
+              <a class="dropbtn" href="/musicBlogs">MUSIC BLOGS</a>
+              <div class="dropdown-content">
+                <a href="/addBlog">ADD BLOGS</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <a class="dropbtn" href="/radioStation">RADIO STATION</a>
+              <div class="dropdown-content">
+                <a href="/addSong">ADD SONGS</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="/musicForum">MUSIC FORUM</a></li>
         </ul>
+      </div>
+
       </div>
 
       <div class="content" style="color:#fff">
@@ -111,7 +189,7 @@
           <p>
             Click Here To Listen
           </p>
-          <img src="media/play1.png" alt="play" id="icon">
+          <img src="media/site/play1.png" alt="play" id="icon">
         </div>
 
       </div>
@@ -119,7 +197,7 @@
     </div>
 
     <audio id="mySong">
-      <source src="media/song.mp3" type="audio/mp3" />
+      <source src="media/site/song.mp3" type="audio/mp3" />
     </audio>
 
 
@@ -130,11 +208,11 @@
       icon.onclick = function(){
         if(mySong.paused){
           mySong.play();
-          icon.src="media/pause.png";
+          icon.src="media/site/pause.png";
         }
         else{
           mySong.pause();
-          icon.src="media/play1.png";
+          icon.src="media/site/play1.png";
         }
 
       }
