@@ -254,6 +254,10 @@ Song.findOne({name:requestedTitle},function(err,song){
 });
 
 
+app.get("/musicForum",function(req,res){
+  res.render("musicForum");
+});
+
 
 
 app.listen(process.env.PORT||3000, function() {
