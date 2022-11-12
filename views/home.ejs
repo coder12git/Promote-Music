@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Promote Music</title>
+
+    <style>
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .container{
+      height: 100vh;
+      width: 100%;
+      background-image: url("https://images.unsplash.com/photo-1487215078519-e21cc028cb29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .navbar{
+      width:88%;
+      margin: auto;
+      padding: 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo{
+      width: 140px;
+      cursor: pointer;
+    }
+
+    .navbar ul li{
+      list-style: none;
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    .navbar ul li a{
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .navbar ul li a:hover{
+      color:#413F42;
+    }
+
+    .content{
+      width: 100%;
+      position: absolute;
+      top: 30%;
+    }
+
+    .left-col{
+      margin-left:6%;
+    }
+
+    .left-col h1{
+      font-size: 90px;
+      line-height: 110px;
+      float: left;
+    }
+
+    .right-col{
+      float:right;
+      margin-right:6%;
+      margin-top: 120px;
+      display:flex;
+      align-items:center;
+    }
+
+    .right-col p{
+      font-size:18px;
+      font-weight:400;
+      margin-right:15px;
+    }
+
+    #icon{
+      width:80px;
+      cursor:pointer;
+    }
+
+    </style>
+
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="navbar">
+        <img src="media/logo.png" alt="logo1">
+        <ul>
+          <li><a href="/about">ABOUT</a></li>
+          <li><a href="#">MUSIC BLOGS</a></li>
+          <li><a href="#">RADIO STATION</a></li>
+          <li><a href="#">MUSIC FORUM</a></li>
+        </ul>
+      </div>
+
+      <div class="content" style="color:#fff">
+        <div class="left-col">
+          <h1>Promote<br />Your<br /> Music<br /> Online</h1>
+
+        </div>
+        <div class="right-col">
+          <p>
+            Click Here To Listen
+          </p>
+          <img src="media/play1.png" alt="play" id="icon">
+        </div>
+
+      </div>
+
+    </div>
+
+    <audio id="mySong">
+      <source src="media/song.mp3" type="audio/mp3" />
+    </audio>
+
+
+    <script>
+      var mySong = document.getElementById("mySong");
+      var icon = document.getElementById("icon");
+
+      icon.onclick = function(){
+        if(mySong.paused){
+          mySong.play();
+          icon.src="media/pause.png";
+        }
+        else{
+          mySong.pause();
+          icon.src="media/play1.png";
+        }
+
+      }
+    </script>
+
+  </body>
+
+</html>
