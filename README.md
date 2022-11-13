@@ -20,7 +20,7 @@ The Idea behind **Promote Music** is to build a hassle-free web application whic
 
 ## What it does?
 
-1. Upon visiting our web app the user is presented with a home Page where they can see basic details **Music Blogs**, **Radio Station** and **Music Forum**.
+1. Upon visiting our web app the user is presented with a home Page where they can see basic details about **Music Blogs**, **Radio Station** and **Music Forum**.
 
 2. On **Music Blogs** page, user can see different blogs of different musicians and if they want to read more about them, they can click on Read More button which will render them to post page where they can see the complete blog of that musician. Also if they want to follow that artist they can go to the Follow Me part where they will see different social icons and on clicking on any of those social icons, the user will render to the social media page of that artist. Also user can see the link of the new song of that artist and if they want to share this post on any of their social platforms, they can do this by clicking on the social icons which I have provide on the left side of the page. Another thing that I had add is the donate part, where if the user wants to support that artist then they can donate money for them.
 Now, if the user is a singer and if they want to write their own blogs, so that people can know their art, they can do this by clicking on **Add Blogs**, which will render them to add blog page where they need to provide some details about them and then they need to click on **Publish** button, to publish their post.
